@@ -89,5 +89,23 @@ namespace Datastructure
             this.head = this.head.next;
             return this.head;
         }
+        internal Node RemoveLastNode()
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
+        }
     }
 }

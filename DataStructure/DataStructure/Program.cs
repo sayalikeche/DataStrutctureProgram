@@ -14,7 +14,7 @@ namespace Datastructure
             linkedlist.Add(56);
             linkedlist.Add(30);
             linkedlist.Add(70);
-            linkedlist.RemoveFirstNode();
+            linkedlist.RemoveLastNode();
             linkedlist.Display();
         }
     }
