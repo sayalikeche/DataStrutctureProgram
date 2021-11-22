@@ -1,9 +1,11 @@
 ﻿using Datastructure;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Datastructure
+namespace DataStructures
 {
-    internal class LinkedList
+    public class LinkedList
     {
         internal Node head;
         internal void Add(int data)
@@ -22,15 +24,9 @@ namespace Datastructure
                 }
                 temp.next = node;
             }
-            Console.Write("\n {0} inserted into linked list", node.data);
+            Console.WriteLine("{0} is inserted into the linked list", node.data);
         }
-
-        internal void Searchvalue()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddinreverseOrder(int data)
+        internal void AddInReverseOrder(int data)
         {
             Node newNode = new Node(data);
             if (this.head == null)
@@ -43,23 +39,21 @@ namespace Datastructure
                 head = newNode;
                 head.next = temp;
             }
-            Console.Write("\n {0} inserted into linked list", newNode.data);
         }
         internal void Display()
         {
-            Console.Write("\n Data of linked list : ");
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linked list is empty");
+                Console.WriteLine("LinkedList is empty");
                 return;
             }
-
             while (temp != null)
             {
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+            Console.WriteLine();
         }
         internal Node InsertAtParticularPosition(int position, int data)
         {
@@ -113,6 +107,22 @@ namespace Datastructure
             }
             NewNode.next = null;
             return head;
+        }
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
     }
 }
