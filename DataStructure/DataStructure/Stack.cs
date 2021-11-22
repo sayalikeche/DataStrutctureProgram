@@ -3,16 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data_Structure
+namespace DataStructures
 {
-    class Stacks
+    class Stack
     {
         internal Node top;
-        internal Stacks()
+        internal Stack()
         {
             this.top = null;
         }
-        internal void Add(int data) // This Method Will Add Int Data into Stack
+        internal void Add(int data)
         {
             Node node = new Node(data);
             if (top == null)
@@ -26,7 +26,7 @@ namespace Data_Structure
             }
             Console.WriteLine("{0} Inserted into Stack", node.data);
         }
-        internal void Display() //This Method Showing the Data in the Stack
+        internal void Display()
         {
             if (top == null)
             {
@@ -44,7 +44,7 @@ namespace Data_Structure
                 Console.WriteLine(" ");
             }
         }
-        internal void Peek() // Peek From The Data
+        internal void Peek()
         {
             if (top == null)
             {
@@ -56,7 +56,7 @@ namespace Data_Structure
 
             }
         }
-        internal void Pop() // Pop From The Data
+        internal void Pop()
         {
             if (top == null)
             {
