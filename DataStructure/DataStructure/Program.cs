@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace Data_Structure
+namespace DataStructures
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Queues qu = new Queues();
-            qu.Enqueu(70);
-            qu.Enqueu(30);
-            qu.Enqueu(56);
-            qu.Display();
+
+            LinkedList link = new LinkedList();
+            link.Add(56);
+            link.Add(30);
+            link.Add(70);
         }
     }
 }
