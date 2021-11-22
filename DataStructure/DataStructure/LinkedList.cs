@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datastructure;
+using System;
 
 namespace Datastructure
 {
@@ -23,6 +24,12 @@ namespace Datastructure
             }
             Console.Write("\n {0} inserted into linked list", node.data);
         }
+
+        internal void Searchvalue()
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddinreverseOrder(int data)
         {
             Node newNode = new Node(data);
